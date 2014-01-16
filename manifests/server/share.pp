@@ -44,7 +44,7 @@ define samba::server::share (
   $share_force_directory_mode = 2770,
   $share_security_mask = 2660,
   $share_force_security_mode = 2660,
-  $share_directory_security_mask = 2770
+  $share_directory_security_mask = 2770,
   $share_force_directory_security_mode = 2770
 ) {
 
