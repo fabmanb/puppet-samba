@@ -19,16 +19,23 @@ class samba::params {
   $printer             = true
 
   # Winbind
-  $workgroup           = undef
-  $passwd_server       = undef
-  $realm               = undef
-  $security            = undef
-  $idmap_uid           = undef
-  $idmap_gid           = undef
-  $seperator           = undef
-  $shell               = undef
-  $use_default_domain  = undef
-  $offline_login       = undef
+  $workgroup             = undef
+  $passwd_server         = undef
+  $realm                 = undef
+  $security              = undef
+  $idmap_uid             = undef
+  $idmap_gid             = undef
+  $seperator             = undef
+  $shell                 = undef
+  $use_default_domain    = undef
+  $offline_login         = undef
+  $template_homedir      = undef
+  $idmap_backend         = undef
+  $winbind_enum_groups   = undef
+  $winbind_enum_users    = undef
+  $obey_pam_restrictions = undef
+  $invalid_users         = undef
+  $socket_options        = undef
 
   case $::osfamily {
     RedHat: {

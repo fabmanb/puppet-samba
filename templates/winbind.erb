@@ -25,10 +25,30 @@
 <%if @template_shell -%>
   template shell = <%= @template_shell %>
 <% end -%>
+<%if @template_homedir -%>
+  template homedir = <%= @template_homedir %>
+<% end -%>
 <% if @use_default_domain -%>
   winbind use default domain = <%= @use_default_domain %>
 <% end -%>
 <% if @offline_login -%>
   winbind offline logon = <%= @offline_login %>
 <% end -%>
-
+<% if @idmap_backend -%>
+  idmap backend = <% @idmap_backend %>
+<% end -%>
+<% if @winbind_enum_groups -%>
+  winbind enum groups = <%= @winbind_enum_groups %>
+<% end -%>
+<% if @winbind_enum_users -%>
+  winbind enum users = <%= @winbind_enum_users %>
+<% end -%>
+<% if @obey_pam_restrictions -%>
+  obey pam restrictions = <%= @obey_pam_restrictions %>
+<% end -%>
+<% if @invalid_users -%>
+  invalid users = <%= @invalid_users %>
+<% end -%>
+<% if @socket_options -%>
+  socket options = <%= @socket_options %>
+<% end -%>
