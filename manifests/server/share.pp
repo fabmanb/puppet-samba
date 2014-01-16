@@ -83,28 +83,28 @@ define samba::server::share (
     validate_string($share_force_group)
   }
   if $share_create_mask {
-    validate_string($share_create_mask);
+    validate_string($share_create_mask)
   }
   if $share_directory_mask {
-    validate_string($share_directory_mask);
+    validate_string($share_directory_mask)
   }
   if $share_force_create_mode {
-    validate_string($share_force_create_mode);
+    validate_string($share_force_create_mode)
   }
   if $share_force_directory_mode {
-    validate_string($share_force_directory_mode);
+    validate_string($share_force_directory_mode)
   }
   if $share_security_mask {
-    validate_string($share_security_mask);
+    validate_string($share_security_mask)
   }
   if $share_force_security_mode {
-    validate_string($share_force_security_mode);
+    validate_string($share_force_security_mode)
   }
   if $share_directory_security_mask {
-    validate_string($share_directory_security_mask);
+    validate_string($share_directory_security_mask)
   }
   if $share_force_directory_security_mode {
-    validate_string($share_force_directory_security_mode);
+    validate_string($share_force_directory_security_mode)
   }
 
   concat::fragment { "share-${name}":
