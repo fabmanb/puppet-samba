@@ -25,12 +25,12 @@
   guest ok = yes
 <% end -%>
 <% if @share_guest_only %>
-  guest only = @share_guest_only
+  guest only = <%= @share_guest_only %>
 <% end -%>
 <% if @share_guest_account %>
-  guest account = @share_guest_account
+  guest account = <%= @share_guest_account %>
 <% end -%>
 <% if @share_force_group %>
-  force group = @share_force_group
+  force group = <%= @share_force_group %>
 <% end -%>
 <% end %>
