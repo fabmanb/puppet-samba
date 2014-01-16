@@ -13,7 +13,6 @@ class samba::params {
 
   # Stand Alone Server Options
   $sa_security         = 'user'
-  $security            = 'user'
   $passdb_backend      = 'tdbsam'
 
   # Printer Options
