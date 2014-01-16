@@ -39,7 +39,7 @@ define samba::server::share (
   $share_guest_account = undef,
   $share_force_group   = undef,
   $share_create_mask   = 2660,
-  $share_directory_mask = 2770
+  $share_directory_mask = 2770,
   $share_force_create_mode = 2660,
   $share_force_directory_mode = 2770,
   $share_security_mask = 2660,
