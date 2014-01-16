@@ -24,13 +24,37 @@
 <% if @share_guest_ok -%>
   guest ok = yes
 <% end -%>
-<% if @share_guest_only %>
+<% if @share_guest_only -%>
   guest only = <%= @share_guest_only %>
 <% end -%>
-<% if @share_guest_account %>
+<% if @share_guest_account -%>
   guest account = <%= @share_guest_account %>
 <% end -%>
 <% if @share_force_group %>
   force group = <%= @share_force_group %>
+<% end -%>
+<% if @share_create_mask -%>
+  create mask = <%= @share_create_mask %>
+<% end -%>
+<% if @share_directory_mask -%>
+  directory mask = <%= @share_directory_mask %>
+<% end -%>
+<% if @share_force_create_mode -%>
+  force create mode = <%= @share_force_create_mode %>
+<% end -%>
+<% if @share_force_directory_mode -%>
+  force directory mode = <%= @share_force_directory_mode %>
+<% end -%>
+<% if @share_security_mask -%>
+  security mask = <%= @share_security_mask %>
+<% end -%>
+<% if @share_force_security_mode -%>
+  force security mode = <%= @share_force_security_mode %>
+<% end -%>
+<% if @share_directory_security_mask -%>
+  directory security mask = <%= @share_directory_security_mask %>
+<% end -%>
+<% if @share_force_directory_security_mode -%>
+  force directory security mode = <%= @share_force_directory_security_mode %>
 <% end -%>
 <% end %>

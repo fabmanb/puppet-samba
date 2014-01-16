@@ -38,6 +38,14 @@ define samba::server::share (
   $share_guest_only    = undef,
   $share_guest_account = undef,
   $share_force_group   = undef,
+  $share_create_mask   = 2660,
+  $share_directory_mask = 2770
+  $share_force_create_mode = 2660,
+  $share_force_directory_mode = 2770,
+  $share_security_mask = 2660,
+  $share_force_security_mode = 2660,
+  $share_directory_security_mask = 2770
+  $share_force_directory_security_mode = 2770
 ) {
 
   include '::samba::server::config'
@@ -73,6 +81,30 @@ define samba::server::share (
   }
   if $share_force_group {
     validate_string($share_force_group)
+  }
+  if $share_create_mask {
+    validate_string($share_create_mask);
+  }
+  if $share_directory_mask {
+    validate_string($share_directory_mask);
+  }
+  if $share_force_create_mode {
+    validate_string($share_force_create_mode);
+  }
+  if $share_force_directory_mode {
+    validate_string($share_force_directory_mode);
+  }
+  if $share_security_mask {
+    validate_string($share_security_mask);
+  }
+  if $share_force_security_mode {
+    validate_string($share_force_security_mode);
+  }
+  if $share_directory_security_mask {
+    validate_string($share_directory_security_mask);
+  }
+  if $share_force_directory_security_mode {
+    validate_string($share_force_directory_security_mode);
   }
 
   concat::fragment { "share-${name}":
