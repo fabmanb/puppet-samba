@@ -37,6 +37,7 @@ define samba::server::share (
   $share_guest_ok      = undef,
   $share_guest_only    = undef,
   $share_guest_account = undef,
+  $share_force_group   = undef,
 ) {
 
   include '::samba::server::config'
@@ -69,6 +70,9 @@ define samba::server::share (
   }
   if $share_guest_account {
     validate_string($share_guest_account)
+  }
+  if $share_force_group {
+    validate_string($share_force_group)
   }
 
   concat::fragment { "share-${name}":
