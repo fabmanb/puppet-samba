@@ -106,6 +106,9 @@ define samba::server::share (
   if $share_force_directory_security_mode {
     validate_string($share_force_directory_security_mode)
   }
+  if $share_browsable {
+    validate_string($share_browsable)
+  }
 
   concat::fragment { "share-${name}":
     ensure  => present,
